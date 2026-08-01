@@ -20,6 +20,7 @@ https://phantom.saurabhdxt.com**
 | `proofs/mirror/` | OpenTimestamps proof of each of this repository's own commits — Bitcoin-verifiable timing. |
 | `proofs/primary/` | Daily HEAD stamps of the primary record (maintained since June 2026), each anchoring its entire commit ancestry. |
 | [`VERIFY.md`](VERIFY.md) | Step-by-step: verify the Bitcoin timing yourself, and check outcomes against aviation-authority NOTAMs. |
+| [`EXAMPLE.md`](EXAMPLE.md) | A worked example: one forecast in this repo, next to the authority NOTAM that covered the same area, with the overlap arithmetic. |
 
 Each row is a calibrated probability that the given cell experiences GNSS
 degradation at the target hour. Rows with `probability >= 0.7` are the
@@ -27,9 +28,9 @@ record's graded high-confidence level.
 
 ## Why a mirror
 
-This repository mirrors the primary anchored record from 2026-08-01 onward and
+This repository mirrors the primary anchored record from 2026-07-31 onward and
 carries its own independent verification history from its first commit. The
-pre-2026-08-01 record is maintained in the primary record repository and is
+pre-2026-07-31 record is maintained in the primary record repository and is
 available for inspection during evaluation; its daily HEAD stamps are
 published here under `proofs/primary/`.
 

@@ -13,7 +13,7 @@ times alone are self-settable, so the binding bound is Bitcoin:
   A verified proof names a Bitcoin block; the block's time is a hard upper
   bound on when that commit (and every file in it) existed.
 - `proofs/primary/` — the daily HEAD stamps of the primary record repository
-  (maintained since 2026-06; this mirror starts 2026-08-01). Each HEAD stamp
+  (maintained since 2026-06; this mirror starts 2026-07-31). Each HEAD stamp
   anchors the primary record's entire commit ancestry via git's parent-hash
   chain. The primary repository is available for inspection during evaluation.
 - Freshly created stamps are *pending* until Bitcoin aggregation completes
