@@ -26,7 +26,7 @@ Forecast rows with `probability >= 0.7` are the record's graded high-
 confidence level. To check outcomes against an independent authority source:
 
 1. Pick a date and area from `reports/forecast/`.
-2. Pull that day's GPS-interference NOTAMs for the region from any public
+2. Pull that day's GPS-interference NOTAMs for the area from any public
    NOTAM service (e.g. FAA NOTAM Search, notams.aim.faa.gov — free), or from
    your own aviation-data provider.
 3. Compare where the high-confidence rows fall against the areas the
