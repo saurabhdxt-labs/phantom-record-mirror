@@ -56,6 +56,6 @@ Timing for rows dated before 2026-08-02 is anchored by the primary record
 [`VERIFY.md`](VERIFY.md)); from 2026-08-02 onward, this repository's own
 commits are the anchored, commit-before-window record.
 
-*Generated 2026-08-03 15:56 UTC from the
+*Generated 2026-08-03 18:26 UTC from the
 live receipt pipeline; a single example illustrates the mechanics — the
 statistical evidence is the aggregate record.*
