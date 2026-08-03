@@ -5,23 +5,25 @@ that covered the same area. Every element below is checkable.
 
 ## 1. The forecast (in this repository)
 
-File: [`reports/forecast/2026-07-31/01_h12.parquet`](reports/forecast/2026-07-31/01_h12.parquet) — 9 high-confidence
+File: [`reports/forecast/2026-07-31/04_h12.parquet`](reports/forecast/2026-07-31/04_h12.parquet) — 11 high-confidence
 cell(s):
 
 | lat | lng | probability | target (UTC) | distance from NOTAM center |
 |---|---|---|---|---|
-| 54.389 | 23.089 | 0.88 | 2026-07-31 13:00 UTC | 85 nm |
-| 54.357 | 23.012 | 0.84 | 2026-07-31 13:00 UTC | 87 nm |
-| 54.476 | 22.965 | 0.85 | 2026-07-31 13:00 UTC | 79 nm |
-| 54.406 | 23.109 | 0.88 | 2026-07-31 13:00 UTC | 84 nm |
-| 54.276 | 22.839 | 0.88 | 2026-07-31 13:00 UTC | 90 nm |
-| 54.289 | 23.044 | 0.88 | 2026-07-31 13:00 UTC | 91 nm |
-| 54.255 | 23.042 | 0.88 | 2026-07-31 13:00 UTC | 93 nm |
-| 54.506 | 23.116 | 0.88 | 2026-07-31 13:00 UTC | 79 nm |
-| 54.539 | 23.155 | 0.88 | 2026-07-31 13:00 UTC | 77 nm |
+| 54.001 | 23.116 | 0.79 | 2026-07-31 16:00 UTC | 108 nm |
+| 54.172 | 22.981 | 0.88 | 2026-07-31 16:00 UTC | 97 nm |
+| 54.157 | 22.924 | 0.88 | 2026-07-31 16:00 UTC | 98 nm |
+| 54.206 | 22.983 | 0.87 | 2026-07-31 16:00 UTC | 95 nm |
+| 54.132 | 23.311 | 0.72 | 2026-07-31 16:00 UTC | 102 nm |
+| 54.039 | 22.860 | 0.86 | 2026-07-31 16:00 UTC | 104 nm |
+| 53.989 | 22.838 | 0.75 | 2026-07-31 16:00 UTC | 107 nm |
+| 54.023 | 22.841 | 0.86 | 2026-07-31 16:00 UTC | 105 nm |
+| 54.089 | 22.919 | 0.86 | 2026-07-31 16:00 UTC | 102 nm |
+| 54.072 | 22.900 | 0.86 | 2026-07-31 16:00 UTC | 103 nm |
+| 54.059 | 22.695 | 0.81 | 2026-07-31 16:00 UTC | 103 nm |
 
-Committed at **2026-07-31 01:25 UTC** (commit
-`c971b3d96070` in the primary record; this mirror carries the same
+Committed at **2026-07-31 04:26 UTC** (commit
+`5bbcf106ceea` in the primary record; this mirror carries the same
 bytes — compare them yourself). The forecast was committed **11.6 h before its target hour**.
 
 ## 2. The authority declaration
@@ -39,7 +41,7 @@ notams.aim.faa.gov — free): search location EYVL, NOTAM A5014/26.
 
 ## 3. The overlap
 
-All 9 cell(s) sit 77–93 nm from the NOTAM center — inside its
+All 11 cell(s) sit 95–108 nm from the NOTAM center — inside its
 155 nm radius. Great-circle math; any calculator confirms it.
 
 ## What this example shows — and what it does not
@@ -54,6 +56,6 @@ Timing for rows dated before 2026-08-02 is anchored by the primary record
 [`VERIFY.md`](VERIFY.md)); from 2026-08-02 onward, this repository's own
 commits are the anchored, commit-before-window record.
 
-*Generated 2026-08-03 10:15 UTC from the
+*Generated 2026-08-03 15:56 UTC from the
 live receipt pipeline; a single example illustrates the mechanics — the
 statistical evidence is the aggregate record.*
