@@ -5,45 +5,48 @@ that covered the same area. Every element below is checkable.
 
 ## 1. The forecast (in this repository)
 
-File: [`reports/forecast/2026-08-03/10_h12.parquet`](reports/forecast/2026-08-03/10_h12.parquet) — 6 high-confidence
+File: [`reports/forecast/2026-08-01/07_h3.parquet`](reports/forecast/2026-08-01/07_h3.parquet) — 12 high-confidence
 cell(s):
 
 | lat | lng | probability | target (UTC) | distance from NOTAM center |
 |---|---|---|---|---|
-| 54.457 | 23.056 | 0.94 | 2026-08-03 22:00 UTC | 81 nm |
-| 54.291 | 22.933 | 0.94 | 2026-08-03 22:00 UTC | 90 nm |
-| 54.338 | 23.141 | 0.94 | 2026-08-03 22:00 UTC | 89 nm |
-| 54.456 | 23.094 | 0.95 | 2026-08-03 22:00 UTC | 81 nm |
-| 54.573 | 23.121 | 0.94 | 2026-08-03 22:00 UTC | 75 nm |
-| 54.591 | 23.066 | 0.94 | 2026-08-03 22:00 UTC | 73 nm |
+| 32.687 | 34.955 | 0.88 | 2026-08-01 10:00 UTC | 79 nm |
+| 32.643 | 34.976 | 0.74 | 2026-08-01 10:00 UTC | 76 nm |
+| 32.647 | 34.949 | 0.90 | 2026-08-01 10:00 UTC | 77 nm |
+| 32.665 | 34.966 | 0.90 | 2026-08-01 10:00 UTC | 78 nm |
+| 32.635 | 34.877 | 0.89 | 2026-08-01 10:00 UTC | 77 nm |
+| 32.672 | 34.911 | 0.90 | 2026-08-01 10:00 UTC | 79 nm |
+| 32.690 | 34.928 | 0.89 | 2026-08-01 10:00 UTC | 79 nm |
+| 32.650 | 34.921 | 0.90 | 2026-08-01 10:00 UTC | 77 nm |
+| 32.668 | 34.938 | 0.90 | 2026-08-01 10:00 UTC | 78 nm |
+| 32.654 | 34.894 | 0.90 | 2026-08-01 10:00 UTC | 78 nm |
+| 32.594 | 34.870 | 0.76 | 2026-08-01 10:00 UTC | 75 nm |
+| 32.628 | 34.932 | 0.90 | 2026-08-01 10:00 UTC | 76 nm |
 
-Committed at **2026-08-03 10:07 UTC** (commit
-`a129e6f23911` in the primary record; this mirror carries the same
-bytes — compare them yourself). The forecast was committed **11.9 h before its target hour**.
+Committed at **2026-08-01 07:38 UTC** (commit
+`2879837b7885` in the primary record; this mirror carries the same
+bytes — compare them yourself). The forecast was committed **2.4 h before its target hour**.
 
 ## 2. The authority declaration (context, stated up front)
 
-**NOTAM A5014/26** (EYVL, issued by EYVN),
-in effect **since 2026-07-29 05:10 UTC**, radius 155 nm:
+**NOTAM A0596/26** (LLLL, issued by LLAD),
+in effect **since 2026-07-28 10:45 UTC**, radius 117 nm:
 
-> PRECAUTION-GNSS SIGNAL JAMMING AND SPOOFING CAN BE  EXPECTED IN
-VILNIUS FIR  MOSTLY IN WESTERN AND SOUTHERN PARTS. CONVENTIONAL
-NAV AIDS AVAILABLE  AND MAY BE USED AS RECOMENDED  IN EASA  SIB
-2022-02R4. AIR  CREW  ARE AS
+> POSS INTRP TO AIRBORNE GNSS EQPT WI TEL-AVIV FIR.
 
-This is a blanket area warning — 155 nautical miles, open-ended.
+This is a blanket area warning — 117 nautical miles, open-ended.
 It cannot say which cells or which hour. **The model never reads NOTAMs**; they
 are used only to grade it. The forecast above is the model's own call — specific
 cells, a specific hour, committed before the window — inside an area the
 authority had flagged.
 
 Look it up yourself on any public NOTAM service (e.g. FAA NOTAM Search,
-notams.aim.faa.gov — free): search location EYVL, NOTAM A5014/26.
+notams.aim.faa.gov — free): search location LLLL, NOTAM A0596/26.
 
 ## 3. The overlap
 
-All 6 cell(s) sit 73–90 nm from the NOTAM center — inside its
-155 nm radius. Great-circle math; any calculator confirms it.
+All 12 cell(s) sit 75–79 nm from the NOTAM center — inside its
+117 nm radius. Great-circle math; any calculator confirms it.
 
 ## What this example shows — and what it does not
 
@@ -57,6 +60,6 @@ Timing for rows dated before 2026-08-02 is anchored by the primary record
 [`VERIFY.md`](VERIFY.md)); from 2026-08-02 onward, this repository's own
 commits are the anchored, commit-before-window record.
 
-*Generated 2026-08-03 23:55 UTC from the
+*Generated 2026-08-04 01:11 UTC from the
 live receipt pipeline; a single example illustrates the mechanics — the
 statistical evidence is the aggregate record.*
