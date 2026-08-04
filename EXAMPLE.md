@@ -5,27 +5,29 @@ that covered the same area. Every element below is checkable.
 
 ## 1. The forecast (in this repository)
 
-File: [`reports/forecast/2026-08-01/07_h3.parquet`](reports/forecast/2026-08-01/07_h3.parquet) — 12 high-confidence
+File: [`reports/forecast/2026-07-31/09_h3.parquet`](reports/forecast/2026-07-31/09_h3.parquet) — 14 high-confidence
 cell(s):
 
 | lat | lng | probability | target (UTC) | distance from NOTAM center |
 |---|---|---|---|---|
-| 32.687 | 34.955 | 0.88 | 2026-08-01 10:00 UTC | 79 nm |
-| 32.643 | 34.976 | 0.74 | 2026-08-01 10:00 UTC | 76 nm |
-| 32.647 | 34.949 | 0.90 | 2026-08-01 10:00 UTC | 77 nm |
-| 32.665 | 34.966 | 0.90 | 2026-08-01 10:00 UTC | 78 nm |
-| 32.635 | 34.877 | 0.89 | 2026-08-01 10:00 UTC | 77 nm |
-| 32.672 | 34.911 | 0.90 | 2026-08-01 10:00 UTC | 79 nm |
-| 32.690 | 34.928 | 0.89 | 2026-08-01 10:00 UTC | 79 nm |
-| 32.650 | 34.921 | 0.90 | 2026-08-01 10:00 UTC | 77 nm |
-| 32.668 | 34.938 | 0.90 | 2026-08-01 10:00 UTC | 78 nm |
-| 32.654 | 34.894 | 0.90 | 2026-08-01 10:00 UTC | 78 nm |
-| 32.594 | 34.870 | 0.76 | 2026-08-01 10:00 UTC | 75 nm |
-| 32.628 | 34.932 | 0.90 | 2026-08-01 10:00 UTC | 76 nm |
+| 32.687 | 34.955 | 0.89 | 2026-07-31 12:00 UTC | 79 nm |
+| 32.647 | 34.949 | 0.90 | 2026-07-31 12:00 UTC | 77 nm |
+| 32.665 | 34.966 | 0.90 | 2026-07-31 12:00 UTC | 78 nm |
+| 32.624 | 34.959 | 0.90 | 2026-07-31 12:00 UTC | 75 nm |
+| 32.635 | 34.877 | 0.86 | 2026-07-31 12:00 UTC | 77 nm |
+| 32.672 | 34.911 | 0.90 | 2026-07-31 12:00 UTC | 79 nm |
+| 32.690 | 34.928 | 0.89 | 2026-07-31 12:00 UTC | 79 nm |
+| 32.650 | 34.921 | 0.90 | 2026-07-31 12:00 UTC | 77 nm |
+| 32.668 | 34.938 | 0.90 | 2026-07-31 12:00 UTC | 78 nm |
+| 32.675 | 34.883 | 0.89 | 2026-07-31 12:00 UTC | 79 nm |
+| 32.654 | 34.894 | 0.90 | 2026-07-31 12:00 UTC | 78 nm |
+| 32.628 | 34.932 | 0.90 | 2026-07-31 12:00 UTC | 76 nm |
+| 32.613 | 34.887 | 0.87 | 2026-07-31 12:00 UTC | 76 nm |
+| 32.632 | 34.904 | 0.90 | 2026-07-31 12:00 UTC | 76 nm |
 
-Committed at **2026-08-01 07:38 UTC** (commit
-`2879837b7885` in the primary record; this mirror carries the same
-bytes — compare them yourself). The forecast was committed **2.4 h before its target hour**.
+Committed at **2026-07-31 09:28 UTC** (commit
+`fcd3fd835233` in the primary record; this mirror carries the same
+bytes — compare them yourself). The forecast was committed **2.5 h before its target hour**.
 
 ## 2. The authority declaration (context, stated up front)
 
@@ -45,7 +47,7 @@ notams.aim.faa.gov — free): search location LLLL, NOTAM A0596/26.
 
 ## 3. The overlap
 
-All 12 cell(s) sit 75–79 nm from the NOTAM center — inside its
+All 14 cell(s) sit 75–79 nm from the NOTAM center — inside its
 117 nm radius. Great-circle math; any calculator confirms it.
 
 ## What this example shows — and what it does not
@@ -60,6 +62,6 @@ Timing for rows dated before 2026-08-02 is anchored by the primary record
 [`VERIFY.md`](VERIFY.md)); from 2026-08-02 onward, this repository's own
 commits are the anchored, commit-before-window record.
 
-*Generated 2026-08-04 01:11 UTC from the
+*Generated 2026-08-04 02:20 UTC from the
 live receipt pipeline; a single example illustrates the mechanics — the
 statistical evidence is the aggregate record.*
