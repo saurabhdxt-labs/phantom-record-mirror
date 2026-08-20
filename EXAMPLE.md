@@ -59,8 +59,11 @@ are used only to grade it. The forecast above is the model's own call — specif
 cells, a specific hour, committed before the window — inside an area the
 authority had flagged.
 
-Look it up yourself on any public NOTAM service (e.g. FAA NOTAM Search,
-notams.aim.faa.gov — free): search location EVRR, NOTAM A3951/26.
+Look it up yourself on any public NOTAM service. For European FIRs the
+authoritative source is EUROCONTROL's European AIS Database (EAD) public
+interface, or the issuing state's own AIS; the FAA's NOTAM Search
+(notams.aim.faa.gov, free) also carries international NOTAMs and needs no
+account. Search location EVRR, NOTAM A3951/26.
 
 ## 3. The overlap
 

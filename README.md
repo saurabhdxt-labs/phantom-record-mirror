@@ -40,7 +40,18 @@ published here under `proofs/primary/`.
   not a git timestamp — see `VERIFY.md`.
 - **Gaps are real and never back-filled.** A re-run would be timestamped
   after the event; a gapless record would be less believable, not more.
-- **Files are first-write-final.** Nothing here is ever revised.
+- **Forecast records are first-write-final.** No file under
+  `reports/forecast/` is ever revised; a re-run would be timestamped after the
+  event, which would defeat the record's purpose.
+- **Two things DO change, by design, and you can see both in `git log`:**
+  the documentation pages (`README.md`, `VERIFY.md`, `EXAMPLE.md`) are
+  regenerated from a versioned template when their wording improves; and
+  timestamp proofs under `proofs/` are upgraded IN PLACE from *pending* to
+  *confirmed* as Bitcoin aggregation completes. An upgrade appends the block
+  attestation to an existing proof — it never alters what was stamped, and the
+  original digest is unchanged. We state this because `git log --name-only`
+  shows those files touched more than once, and we would rather explain it
+  than have you find it and wonder.
 - **Misses stay in the record.** The replay shows them.
 
 ## Contact

@@ -48,8 +48,9 @@ confidence level. To check outcomes against an independent authority source:
 
 1. Pick a date and area from `reports/forecast/`.
 2. Pull that day's GPS-interference NOTAMs for the area from any public
-   NOTAM service (e.g. FAA NOTAM Search, notams.aim.faa.gov — free), or from
-   your own aviation-data provider.
+   NOTAM service — EUROCONTROL EAD or the issuing state's AIS for European
+   FIRs, the FAA's free NOTAM Search for a no-account option, or your own
+   aviation-data provider.
 3. Compare where the high-confidence rows fall against the areas the
    authorities declared. NOTAMs are declarations, not per-hour ground truth —
    the aggregate comparison methodology and its results are part of the
