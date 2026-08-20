@@ -8,17 +8,38 @@ Every forecast file was committed BEFORE the window it predicts. Git commit
 times alone are self-settable, so the binding bound is Bitcoin:
 
 - `proofs/mirror/` — an OpenTimestamps stamp of each of this repository's own
-  sync commits. Verify with the open-source `ots` client:
-  `ots verify proofs/mirror/<commit>.sha.ots proofs/mirror/<commit>.sha`
-  A verified proof names a Bitcoin block; the block's time is a hard upper
-  bound on when that commit (and every file in it) existed.
+  sync commits, made with the open-source `ots` client.
+
+  **Two ways to check one. Start with (b) — it needs nothing installed.**
+
+  **(a) Full verification, if you run a Bitcoin node:**
+  `ots verify proofs/mirror/<commit>.sha.ots`
+  Note this reads the block from a LOCAL Bitcoin node. Without one it reports
+  `Could not connect to Bitcoin node` — that is the absence of a node on your
+  machine, not a failure of the proof.
+
+  **(b) Node-free, and sufficient for the timing claim:**
+  `ots info proofs/mirror/<commit>.sha.ots`
+  The output names a **Bitcoin block height**. Look that block up on any
+  public explorer (blockstream.info, mempool.space, blockchain.com) and read
+  its timestamp. That timestamp is a hard upper bound on when the commit —
+  and every forecast file inside it — already existed. Nothing in this
+  repository, and no action by us, can move a Bitcoin block's time.
+
+  Worked example you can run today:
+  `proofs/mirror/003aee6d9c56f5c58859e327fb93906448f98411.sha.ots` resolves to
+  **Bitcoin block 961735**. That commit contains
+  `reports/forecast/2026-08-09/12_h12.parquet` — a 12-hour-ahead forecast for
+  the hour beginning 2026-08-10T00:00Z. Confirm the block predates the
+  forecast hour, and the ordering is settled without trusting us.
 - `proofs/primary/` — the daily HEAD stamps of the primary record repository
   (maintained since 2026-06; this mirror starts 2026-07-31). Each HEAD stamp
   anchors the primary record's entire commit ancestry via git's parent-hash
   chain. The primary repository is available for inspection during evaluation.
 - Freshly created stamps are *pending* until Bitcoin aggregation completes
   (typically hours); `ots upgrade` completes them. Pending is a queue state,
-  not a weaker claim.
+  not a weaker claim — and it only ever affects the most recent stamps, so
+  pick an older one if you want a confirmed proof immediately.
 
 ## 2. Outcomes — aviation-authority NOTAMs
 

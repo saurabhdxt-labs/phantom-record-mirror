@@ -30,9 +30,16 @@ cell(s):
 | 55.445 | 20.560 | 0.91 | 2026-08-04 17:00 UTC | 111 nm |
 | 55.528 | 20.544 | 0.91 | 2026-08-04 17:00 UTC | 109 nm |
 
-Committed at **2026-08-04 12:40 UTC** (commit
-`73519b8f300c` in the primary record; this mirror carries the same
-bytes — compare them yourself). The forecast was committed **4.3 h before its target hour**.
+Committed at **2026-08-04 12:40 UTC**, in THIS
+repository's commit `73519b8f300c` — which you can open here:
+[`73519b8f300c`](../../commit/73519b8f300c961d0f5c714942bb8ee3676d35e8). The forecast was committed **4.3 h before its target hour**.
+
+**Bitcoin bound — check this without installing anything.** The mirror commit carrying this file, `73519b8f300c`, is timestamped into **Bitcoin block 961016**
+(proof: [`proofs/mirror/73519b8f300c961d0f5c714942bb8ee3676d35e8.sha.ots`](proofs/mirror/73519b8f300c961d0f5c714942bb8ee3676d35e8.sha.ots)). Open that block on any explorer —
+[mempool.space/block/961016](https://mempool.space/block/961016) or [blockstream.info/block-height/961016](https://blockstream.info/block-height/961016) —
+and read its timestamp. No one, including us, can move a Bitcoin block's time. Git commit
+times are self-settable; this is not.
+
 
 ## 2. The authority declaration (context, stated up front)
 
