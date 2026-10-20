@@ -60,4 +60,4 @@ Evaluation, verification walk-through, or data questions:
 **saurabh@saurabhdxt.com**
 
 *All rights reserved. The record is published for verification; the
-forecasting method is proprietary (patent pending).*
+forecasting method is proprietary.*
