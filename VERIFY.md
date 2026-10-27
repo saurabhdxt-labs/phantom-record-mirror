@@ -4,7 +4,12 @@ Nothing here asks for trust. Two independent checks, both runnable by anyone.
 
 ## 1. Timing — the Bitcoin bound
 
-Every forecast file was committed BEFORE the window it predicts. Git commit
+A forecast row counts only if it was committed before the hour it covers.
+Most rows were; not all. The first two record days (31 July and 1 August 2026)
+were backfilled in one commit on 1 August, and an outage-recovery commit can
+land a row at or after the hour it covers (`git log --format=%cI -- <file>`
+shows the time of any file). Such rows are kept, never rewritten, and are
+refused as evidence by the adjudication layer rather than served. Git commit
 times alone are self-settable, so the binding bound is Bitcoin:
 
 - `proofs/mirror/` — an OpenTimestamps stamp of each of this repository's own
@@ -58,6 +63,7 @@ confidence level. To check outcomes against an independent authority source:
 
 ## Honesty notes
 
-- Gaps in the record are real and never back-filled: a re-run would be
-  timestamped after the event, which would defeat the record's purpose.
+- Gaps in the record are real. A row committed at or after the hour it
+  covers is kept but does not count as a forecast of that hour: a re-run
+  timestamped after the event would defeat the record's purpose.
 - Files are first-write-final. Nothing in this repository is ever revised.

@@ -36,10 +36,13 @@ published here under `proofs/primary/`.
 
 ## Honesty rules this record lives by
 
-- **Committed before the window.** The binding time bound is a Bitcoin block,
-  not a git timestamp — see `VERIFY.md`.
-- **Gaps are real and never back-filled.** A re-run would be timestamped
-  after the event; a gapless record would be less believable, not more.
+- **Committed before the window, or it does not count.** The binding time
+  bound is a Bitcoin block, not a git timestamp — see `VERIFY.md`, which also
+  names the rows that were committed late.
+- **Gaps are real.** A missing hour stays missing. Where an outage recovery
+  committed a row at or after the hour it covers, the row is kept but does
+  not count as a forecast of that hour; a gapless record would be less
+  believable, not more.
 - **Forecast records are first-write-final.** No file under
   `reports/forecast/` is ever revised; a re-run would be timestamped after the
   event, which would defeat the record's purpose.
