@@ -26,6 +26,19 @@ Each row is a calibrated probability that the given cell experiences GNSS
 degradation at the target hour. Rows with `probability >= 0.7` are the
 record's graded high-confidence level.
 
+## Machine-readable index
+
+`index/<day>.json` lists, for one record day, every forecast file present,
+the commit in THIS repository that first added it, that commit's time, the
+lead in minutes before the hour the file forecasts, whether it was late
+(committed at or after that hour), and whether a proof file exists for that
+commit. `index/latest.json` names the newest day and lists every indexed day.
+The commit times are this repository's own git times — self-reported, and
+reproducible with `git log` — not the Bitcoin bound; the `proof` field is a
+structural presence check of `proofs/mirror/<commit>.sha.ots`,
+not a Bitcoin verification. Index updates land in their own `index:` commits, separate from
+the forecast and `anchor:` commits, and are not themselves timestamped.
+
 ## Why a mirror
 
 This repository mirrors the primary anchored record from 2026-07-31 onward and
